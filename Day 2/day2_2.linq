@@ -13,8 +13,7 @@ void Main() {
 		var ch = m.Groups[3].Value[0];
 		var pw = m.Groups[4].Value;
 		
-		var count = pw.Count(c => c == ch);
-		if( min <= count && count <= max)
+		if( pw[min-1] ==ch  ^ pw[max-1] == ch)
 			valid++;
 		else
 			invalid++;
